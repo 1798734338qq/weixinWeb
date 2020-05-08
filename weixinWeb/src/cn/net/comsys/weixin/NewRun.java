@@ -1,0 +1,29 @@
+package cn.net.comsys.weixin;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import cn.hutool.http.HttpRequest;
+import cn.hutool.http.HttpResponse;
+
+public class NewRun implements Runnable{
+	String cookie = "shshshfpb=21fff2524cd324e7d9b81025444de9b66535061311193f5758afea4ea0; shshshfpa=48c6b815-7d46-336f-8264-2c491fca82c3-1557991666; __jdu=1313242208; 3AB9D23F7A4B3C9B=5RLBD2UOAVNQBGYCQEZTLPAUB4OH2SRMYW6YG3V4GTLIME5DAMPJP36OVAUQLEZNQSPCZFJFECYIFUVF6JBKOT6KTA; mba_muid=1313242208; areaId=22; ipLoc-djd=22-1930-50948-0; pin=%E5%B8%85%E5%BE%97%E6%97%A0%E4%BB%A5%E4%BC%A6%E6%AF%94; unick=Mrluoa; _pst=%E5%B8%85%E5%BE%97%E6%97%A0%E4%BB%A5%E4%BC%A6%E6%AF%94; autoOpenApp_downCloseDate_auto=1568102189078_21600000; logintype=qq; npin=%E5%B8%85%E5%BE%97%E6%97%A0%E4%BB%A5%E4%BC%A6%E6%AF%94; unpl=V2_ZzNtbUBeRh1wCU9dchgIUmIFQgpLAktBfAkVVXwbX1AwARNYclRCFX0UR1xnGV0UZwUZXUdcRhFFCEdkeBBcNWQCEltDXkMcdAlGZEsaXDVuMxJfQlVAEHYLR11LKVs1ZAUVXUVTSxB1D0JkSx5dAm4LFG1DZ0IlN1waUXwQWAVmThJfQlVAEHYLR11LGGwG; shshshfp=d7f81566e07da6a5bda984ee21618689; __jda=122270672.1313242208.1557991663.1568107921.1568179595.47; __jdc=122270672; wlfstk_smdl=ortznukh8td5gheaq1hp26m349oraduz; TrackID=1hfEeiBZCa-RbX8jt7nB4FyOf55Q4YXfK_shYNf53mMZPpt3GfwWggXnmaWjZEA-88Z_svrcsRQAFSXtDQoNaRL7F8JxDsQXSTDJFaA1kZHVMsKxpYXhpVlyiTJNnLvXB; thor=C14369EA898AFA1BEC59BF345CD3D9945ED6632742DE7462C26AC2FF8A3EA35F5A223CF3227172D8048251C744781CE157D1D8304B7102BACEF199126A82EA6287A02529AC9EB88ACFCECE89F62388805FDDA252DDBEA304A5A3648827A99E04743AEE38B2E40B039C01A6F252674DA2F3446AC44A929986D564DA2690824581; pinId=88_rt9F3G828EukNU8kq_OaIrLu-uctc; ceshi3.com=201; _tp=eLrpzrxGbl8PkvFzbz%2B366RePhMNSh6fhMsXhGFwvZp%2FTb5Y8TLgWi486010JwJgVZFZ66kPYcdxPb1b1uZ1Nw%3D%3D; __jdb=122270672.4.1313242208|47.1568179595; __jdv=122270672|kong|t_1000444125_|jingfen|ab912f8e3857486083a124195e5e85a7|1568179614046; shshshsID=b6daecd8dfcc267b253a4370482e8974_2_1568179614349";
+	String url = "https://api.m.jd.com/client.action?functionId=newBabelAwardCollection&body=%7B%22activityId%22%3A%22AEkR9qkETxdAYd5LiBp2dkVDo5Z%22%2C%22scene%22%3A%221%22%2C%22args%22%3A%22key%3DFCA87A4B348FCFBF4EDD1CDCEE7BAB246DD1A235B547B8AB35D2D5B734279303DCC79108034DA12F1D6E1B5565560088_babel%2CroleId%3DF1C354AE668C5B3FB2DA69109BFD3179_babel%22%2C%22eid%22%3A%225RLBD2UOAVNQBGYCQEZTLPAUB4OH2SRMYW6YG3V4GTLIME5DAMPJP36OVAUQLEZNQSPCZFJFECYIFUVF6JBKOT6KTA%22%2C%22fp%22%3A%22df60ba3ab5638ae4bdbdd697295c1a7c%22%2C%22pageClick%22%3A%22Babel_Coupon%22%2C%22mitemAddrId%22%3A%22%22%2C%22geo%22%3A%7B%22lng%22%3A%22%22%2C%22lat%22%3A%22%22%7D%7D&screen=750*1334&client=wh5&clientVersion=1.0.0&sid=&uuid=&area=&loginType=3&callback=jsonp1";
+	String body = "";
+	@Override
+	public void run() {
+		Map<String, String> header = new HashMap<String, String>();
+		header.put("User-Agent", "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1");
+		header.put("Referer", "https://pro.m.jd.com/wq/active/4JmzTbPfQdfbm4rtBk2cDdhuiP3z/index.html?utm_campaign=t_2010160343_&utm_term=056b1e09c3f5460eaba2b26c25dcbcf1&utm_medium=jingfen&utm_source=kong&cu=true");
+		
+		url = "https://uranus.jd.com/log/m?std=MO-J2011-1";
+		body = "{\"pin_sid\":\"\",\"report_ts\":\"1568180247721\",\"scr\":\"375x667\",\"token\":\"566e055640461f3e91dfd2430d8afab7\",\"ut\":\"s\",\"clt\":\"web\",\"jvr\":\"3.0.5\",\"std\":\"MO-J2011-1\",\"tpc\":\"traffic-jdm.ot\",\"uuid\":\"1313242208\",\"cli\":\"M-M\",\"biz\":\"mba\",\"mba_muid\":\"1313242208\",\"mba_sid\":\"15681801064081386479132038425\",\"proj_id\":\"3\",\"reserved3\":\"122270672.1313242208.1557991663.1568179595.1568180106.48_122270672_kong_t_2010160343__jingfen_056b1e09c3f5460eaba2b26c25dcbcf1_1568180223512_122270672.6.1313242208_48.1568180106_1313242208_122270672.6.1313242208_48.1568180106___V2_ZzNtbUBeRh1wCU9dchgIUmIFQgpLAktBfAkVVXwbX1AwARNYclRCFX0UR1xnGV0UZwUZXUdcRhFFCEdkeBBcNWQCEltDXkMcdAlGZEsaXDVuMxJfQlVAEHYLR11LKVs1ZAUVXUVTSxB1D0JkSx5dAm4LFG1DZ0IlN1waUXwQWAVmThJfQlVAEHYLR11LGGwG\",\"osp\":\"iphone\",\"data\":[{\"ref\":\"https://graph.qq.com/oauth2.0/show\",\"rpr\":\"which=Login&display=pc&response_type=code&client_id=100273020&redirect_uri=https%3A%2F%2Fwqlogin1.jd.com%2Fmlogin%2Fh5v1%2FGetCode%3Fftype%3D1%26check%3D661d67c795f82993751efea585e68b4d%26state%3D0-1568180122-298772-10029-0\",\"ctm\":\"1568180247724\",\"pin\":\"帅得无以伦比\",\"pid\":\"88_rt9F3G828EukNU8kq_OaIrLu-uctc\",\"ctp\":\"https://pro.m.jd.com/wq/active/4JmzTbPfQdfbm4rtBk2cDdhuiP3z/index.html\",\"par\":\"utm_campaign=t_2010160343_&utm_term=056b1e09c3f5460eaba2b26c25dcbcf1&utm_medium=jingfen&utm_source=kong&cu=true\",\"usc\":\"kong\",\"umd\":\"jingfen\",\"utr\":\"056b1e09c3f5460eaba2b26c25dcbcf1\",\"ucp\":\"t_2010160343_\",\"jdv\":\"122270672|kong|t_2010160343_|jingfen|056b1e09c3f5460eaba2b26c25dcbcf1|1568180223512\",\"vts\":48,\"seq\":6,\"browser_ver\":\"604.1\",\"browser\":\"Safari\",\"fst\":1557991663,\"pst\":1568179595,\"vct\":1568180106,\"clr\":\"24-bit\",\"bsl\":\"zh-cn\",\"bsc\":\"UTF-8\",\"jav\":0,\"flv\":\"\",\"tit\":\"米面杂粮\",\"hash\":\"\",\"tad\":\"1\",\"dataver\":\"0.1\",\"typ\":\"mg\",\"lts\":\"ot\",\"lgt\":\"mg\",\"sfj\":{\"t1\":\"magictree\",\"t2\":\"Z\",\"p0\":\"%252F%252F*%255B%2540id%253D%2522J_babelOptPage%2522%255D%252Fdiv%252Fdiv%255B4%255D%252Fdiv%252Fa%7C%7C%7C%252F%252F*%255B%2540id%253D%2522J_babelOptPage%2522%255D%252Fdiv%252Fdiv%255B4%255D%252Fdiv%7C%7C%7C%252Fhtml%252Fbody%252Fdiv%252Fdiv%255B2%255D%252Fdiv%252Fdiv%252Fdiv%255B4%255D%252Fdiv%252F%7C%7C%7C10%7C%7C%7C265x379%7C%7C%7C375x9370%7C%7C%7C0%7C%7C%7C0.7067%7C%7C%7C0.0404%7C%7C%7C-%7C%7C%7C-%7C%7C%7Cjavascript%253Avoid(0)%253B%7C%7C%7C-%7C%7C%7C-\"}}]}";
+		HttpResponse httpResponse = HttpRequest.post(url).cookie(cookie).body(body).addHeaders(header).execute();
+		System.out.println(httpResponse.body());
+	}
+	
+	public static void main(String[] args) {
+		new Thread(new NewRun()).run();
+	}
+
+}
